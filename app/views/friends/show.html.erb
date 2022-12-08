@@ -1,0 +1,21 @@
+<div class="mt-4 p-5 bg-light rounded">
+  <h1 class="display-4">
+    <%= @friend.full_name %>
+  </h1>
+  <p class="lead">
+    <%= @friend.email %> |
+    <%= @friend.phone %> 
+  </p>
+  <hr class="my-4">
+  <p>
+    <strong>Telegram:</strong> <%= @friend.telegram %> |
+    <strong>Discord:</strong> <%= @friend.discord %>
+  </p>
+  <br/><br/>
+  <div>
+    <%= link_to "Edit", edit_friend_path(@friend), class:"btn btn-secondary" %> 
+    <%= link_to "Back", friends_path, class:"btn btn-dark" %>
+    <br/><br/>  
+    <%= button_to "Destroy", @friend, method: :delete, class:"btn btn-danger" %> 
+  </div>
+</div>
